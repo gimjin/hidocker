@@ -1,3 +1,13 @@
+
+## Docker workflow
+
+1. Setup nginx:latest image
+2. Create custom docker image
+3. Create a new container
+4. Start, Stop and etc container
+
+
+## Docker useful commands
 ```bash
 # Setup Nginx
 $ docker pull nginx:latest
@@ -24,8 +34,8 @@ $ docker stop hidocker
 $ docker exec -ti hidocker /bin/bash
 
 # Save one or more images to a tar archive
-docker save hidocker-nginx:v0.0.1 > ./hidocker-nginx.v0.0.1.tar
+$ docker save -o hidocker-nginx.v0.0.1.tar hidocker-nginx:v0.0.1
 
 # Load an image from a tar archive
-docker load -i ./hidocker-nginx.v0.0.1.tar
+$ docker load -i ./hidocker-nginx.v0.0.1.tar
 ```
